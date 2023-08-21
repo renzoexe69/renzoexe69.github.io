@@ -4,30 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Buen Inicio de Ciclo</title>
 </head>
 
-<body>    
+<body>
+    <div class="windows" id="win">
+        <p>En tus ojos resplandece luz sin final, <br>
+            Mis lágrimas de alegria comienzan a brotar, <br>
+            Cada realidad se tiñe de felicidad, <br>
+            Eres mi razón, mi eterna claridad.</p>
+        <div id="cerrar">
+
+        </div>
+        <button type="button" class="color-button-close" id="win" onclick="cerrar();"> Cerrar </button>
+    </div>
 
     <div class="container">
         <h1>Buen Inicio de Ciclo</h1>
-        <p>¡Hoy es el día donde empezará tu gran esperado estrés, presión y tareas! Ya en el sexto ciclo de tu carrera sigue así se qeu puedes con todo y sabes que estaré apoyandote en todo lo que necesites.
-        <br>
-        Eres luz en mis ojos, un brillo sin fin,
-        Mis lágrimas de alegría, empiezan a fluir,
-        Felicidad en gotas, en cada realidad.
-        </p>
-        <p>Te quiero bonito,<br>Renzo</p>
+        <p>Da todo de ti para tener un buen ciclo, ten paciencia y confianza en lo que realices. <br> a se viene el buen estrés, presión y tareas 😼.</p>
+        <p>Te quiere bonito,<br>Renzo</p>        
+        <button type="button" class="color-button" id="win" onclick="abrir();"> Abrir </button>
     </div>
+
     <div class="containerbox">
         <div class="box">
             <img class="image" src="Imagen1.jpeg" alt="Imagen 1">
+            <img class="image" src="Imagen3.jpeg" alt="Imagen 3">
         </div>
         <div class="box">
             <img class="image" src="Imagen2.jpeg" alt="Imagen 2">
+            <img class="image" src="Imagen4.jpeg" alt="Imagen 4">
         </div>
-
 </body>
+
+<script>
+    function abrir() {
+        document.getElementById("win").style.display = "block"
+    }
+    function cerrar(){
+        document.getElementById("win").style.display = "none"
+    }
+
+</script>
 
 </html>
