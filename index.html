@@ -15,35 +15,44 @@
             Cada realidad se tiñe de felicidad, <br>
             Eres mi razón, mi eterna claridad.</p>
         <div id="cerrar">
-
+            <button type="button" class="color-button-close" id="win" onclick="cerrar();"> Cerrar </button>
         </div>
-        <button type="button" class="color-button-close" id="win" onclick="cerrar();"> Cerrar </button>
     </div>
 
     <div class="container">
         <h1>Buen Inicio de Ciclo</h1>
-        <p>Da todo de ti para tener un buen ciclo, ten paciencia y confianza en lo que realices. <br> a se viene el buen estrés, presión y tareas 😼.</p>
-        <p>Te quiere bonito,<br>Renzo</p>        
+        <p>Da todo de ti para tener un buen ciclo, ten paciencia y confianza en lo que realices. Ya se viene el
+            buen estrés, presión y tareas 😼.</p>
+        <p>Te quiere bonito,<br>Renzo</p>
         <button type="button" class="color-button" id="win" onclick="abrir();"> Abrir </button>
     </div>
 
-    <div class="containerbox">
-        <div class="box">
-            <img class="image" src="Imagen1.jpeg" alt="Imagen 1">
-            <img class="image" src="Imagen3.jpeg" alt="Imagen 3">
-            <img class="image" src="Imagen2.jpeg" alt="Imagen 2">
-            <img class="image" src="Imagen4.jpeg" alt="Imagen 4">
+    <div class="container">
+        <div>
+            <img class="image" src="Fotos/Imagen1.jpeg" alt="Imagen 1">
+            <img class="image" src="Fotos/Imagen2.jpeg" alt="Imagen 3">
+            <img class="image" src="Fotos/Imagen3.jpeg" alt="Imagen 2">
+            <img class="image" src="Fotos/Imagen4.jpeg" alt="Imagen 4">
         </div>
+    </div>
+
+    
 </body>
 
 <script>
     function abrir() {
         document.getElementById("win").style.display = "block"
     }
-    function cerrar(){
+    function cerrar() {
         document.getElementById("win").style.display = "none"
     }
 
 </script>
+
+<footer>
+   <!--  <div>
+        <a href="galeriameses.html" type="button" class="color-button-next"> Galeria</a>
+    </div>-->
+</footer>
 
 </html>
