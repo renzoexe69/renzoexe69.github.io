@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegalery.css">
+    <link rel="icon" href="imagenes/ImagenA.jpeg">
+
+      <title>Quinta Galeria</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Quinta Galeria</h1>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+
+    <div class="gallery">
+        <div class="photo" onclick="openModal('Consultorio', 'Mi amorcito en el consultorio y yo camino a recogerla si si si', 'imagenes/Imagen115.jpeg')">
+            <img src="imagenes/Imagen115.jpeg" alt="Foto 115">
+        </div>
+        <div class="photo" onclick="openModal('Pómulitos', 'Una fotito donde me dijo que tenia razón sobre sos hermosos pómulos', 'imagenes/Imagen116.jpeg')">
+            <img src="imagenes/Imagen116.jpeg" alt="Foto 116">
+        </div>
+	<div class="photo" onclick="openModal('En caminooo..', 'Camino al consultorio a recoger a mi hermosa mininita', 'imagenes/Imagen117.jpeg')">
+            <img src="imagenes/Imagen117.jpeg" alt="Foto 117">
+        </div>
+	<div class="photo" onclick="openModal('Videollamadita', 'Bajando pepa por videollamada la amo', 'imagenes/Imagen118.jpeg')">
+            <img src="imagenes/Imagen118.jpeg" alt="Foto 118">
+        </div>
+	<div class="photo" onclick="openModal('Gatoo', 'Gato? Gaatoooooo', 'imagenes/Imagen119.jpeg')">
+            <img src="imagenes/Imagen119.jpeg" alt="Foto 119">
+        </div>
+	<div class="photo" onclick="openModal('Chocolato caliente', 'Mi mom preparó chocolate caliente y comimos con el panetón que trajo mi mininita', 'imagenes/Imagen120.jpeg')">
+            <img src="imagenes/Imagen120.jpeg" alt="Foto 120">
+        </div>
+	<div class="photo" onclick="openModal('Jhahjshjajhs mi casaca', 'Tremenda, mi amorcito chikitiiita con mi casaca la amo', 'imagenes/Imagen121.jpeg')">
+            <img src="imagenes/Imagen121.jpeg" alt="Foto 121">
+        </div>
+		<div class="photo" onclick="openModal('WTFFF???', 'Beso de 3 dices ajkhhjskadhjasd', 'imagenes/Imagen122.jpeg')">
+            <img src="imagenes/Imagen122.jpeg" alt="Foto 122">
+        </div>
+	<div class="photo" onclick="openModal('Foto con el cat', 'Mordiendo su orejita como debe de ser', 'imagenes/Imagen123.jpeg')">
+            <img src="imagenes/Imagen123.jpeg" alt="Foto 123">
+        </div>
+        
+    </div>
+    <!-- Agrega más elementos .photo para más fotos -->
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <h2 id="modal-title">Título de la Foto</h2>
+            <p id="modal-description">Descripción de la foto.</p>
+            <img id="modal-image" class="modal-image" src="" alt="">
+        </div>
+    </div>
+    <script>
+        function openModal(title, description, imageUrl) {
+            var modal = document.getElementById("modal");
+            var modalTitle = document.getElementById("modal-title");
+            var modalDescription = document.getElementById("modal-description");
+            var modalImage = document.getElementById("modal-image");
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalImage.src = imageUrl;
+
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+<br>
+<footer class="contenedor">
+    <div>
+        <a href="Galeria4.html" type="button" class="color-button-back"> Atras </a>
+    </div>
+    <br>
+    <div>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+</footer>
+<br>
