@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegalery.css">
+    <link rel="icon" href="imagenes/ImagenA.jpeg">
+
+      <title>Sexta Galeria</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sexta Galeria</h1>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+
+    <div class="gallery">
+        <div class="photo" onclick="openModal('Salchi', 'Salchipapa para mi amorcitooo, hermosa piyamita en el primero de enero jijijj', 'imagenes/Imagen148.jpeg')">
+            <img src="imagenes/Imagen148.jpeg" alt="Foto 148">
+        </div>
+        <div class="photo" onclick="openModal('Amando', 'Como trata al corderito que le di, amo como está en camita viendo su doramita', 'imagenes/Imagen149.jpeg')">
+            <img src="imagenes/Imagen149.jpeg" alt="Foto 149">
+        </div>
+	      <div class="photo" onclick="openModal('Maldito gaaatoooo', 'Me arañó mientras huia de todos ajsjhdhjajhsd aún está marcado jijijj', 'imagenes/Imagen150.jpeg')">
+            <img src="imagenes/Imagen150.jpeg" alt="Foto 150">
+        </div>
+
+      
+
+    </div>
+    <!-- Agrega más elementos .photo para más fotos -->
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <h2 id="modal-title">Título de la Foto</h2>
+            <p id="modal-description">Descripción de la foto.</p>
+            <img id="modal-image" class="modal-image" src="" alt="">
+        </div>
+    </div>
+    <script>
+        function openModal(title, description, imageUrl) {
+            var modal = document.getElementById("modal");
+            var modalTitle = document.getElementById("modal-title");
+            var modalDescription = document.getElementById("modal-description");
+            var modalImage = document.getElementById("modal-image");
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalImage.src = imageUrl;
+
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+<br>
+<footer class="contenedor">
+    <div>
+        <a href="Galeria5.html" type="button" class="color-button-back"> Atras </a>
+    </div>
+    <br>
+    <div>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+</footer>
+<br>
