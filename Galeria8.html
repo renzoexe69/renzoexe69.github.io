@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegalery.css">
+    <link rel="icon" href="imagenes/ImagenA.jpeg">
+
+      <title>Octava Galeria</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Octava Galeria</h1>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+
+    <div class="gallery">
+        <div class="photo" onclick="openModal('Skinker', 'Gozus con el skinker😼', 'imagenes/Imagen181.jpeg')">
+    <img src="imagenes/Imagen181.jpeg" alt="Foto 181">
+</div>
+<div class="photo" onclick="openModal('Party day', 'Jjkajkhshjahjs maquillaje color brown XD', 'imagenes/Imagen182.jpeg')">
+    <img src="imagenes/Imagen182.jpeg" alt="Foto 182">
+</div>
+
+        
+    </div>
+    <!-- Agrega más elementos .photo para más fotos -->
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <h2 id="modal-title">Título de la Foto</h2>
+            <p id="modal-description">Descripción de la foto.</p>
+            <img id="modal-image" class="modal-image" src="" alt="">
+        </div>
+    </div>
+    <script>
+        function openModal(title, description, imageUrl) {
+            var modal = document.getElementById("modal");
+            var modalTitle = document.getElementById("modal-title");
+            var modalDescription = document.getElementById("modal-description");
+            var modalImage = document.getElementById("modal-image");
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalImage.src = imageUrl;
+
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+<br>
+<footer class="contenedor">
+    <div>
+        <a href="Galeria7.html" type="button" class="color-button-back"> Atras </a>
+    </div>
+    <br>
+    <div>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+</footer>
+<br>
