@@ -93,3 +93,28 @@
   h1{
     color: red;
   }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #f4f4f4;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
