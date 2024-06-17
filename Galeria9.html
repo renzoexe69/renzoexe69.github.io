@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegalery.css">
+    <link rel="icon" href="imagenes/ImagenA.jpeg">
+
+      <title>Novena Galeria</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Novena Galeria</h1>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+
+    <div class="gallery">
+<div class="photo" onclick="openModal('Peleeaaaa', 'Pelea de pewoooos', 'imagenes/Imagen209.jpeg')">
+    <img src="imagenes/Imagen209.jpeg" alt="Foto 209">
+</div>
+
+<div class="photo" onclick="openModal('Llevaré 4 amor', 'Mininita hermosa probando ropita', 'imagenes/Imagen210.jpeg')">
+    <img src="imagenes/Imagen210.jpeg" alt="Foto 210">
+</div>
+
+
+
+    
+</div>
+    <!-- Agrega más elementos .photo para más fotos -->
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <h2 id="modal-title">Título de la Foto</h2>
+            <p id="modal-description">Descripción de la foto.</p>
+            <img id="modal-image" class="modal-image" src="" alt="">
+        </div>
+    </div>
+    <script>
+        function openModal(title, description, imageUrl) {
+            var modal = document.getElementById("modal");
+            var modalTitle = document.getElementById("modal-title");
+            var modalDescription = document.getElementById("modal-description");
+            var modalImage = document.getElementById("modal-image");
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalImage.src = imageUrl;
+
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+<br>
+<footer>
+    <div>
+        <div class="pagination">
+            <a href="Galeria1.html" class="active">1</a>
+            <a href="Galeria2.html" class="active">2</a>
+            <a href="Galeria3.html" class="active">3</a>
+            <a href="Galeria4.html" class="active">4</a>
+            <a href="Galeria5.html" class="active">5</a>
+            <a href="Galeria6.html" class="active">6</a>
+            <a href="Galeria7.html" class="active">7</a>
+            <a href="Galeria8.html" class="active">8</a>
+            <a href="Galeria9.html" class="active">9</a>
+          </div>
+          
+    </div>
+</footer>
+<br>
