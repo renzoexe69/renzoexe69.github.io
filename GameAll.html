@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dale a mi corazón</title>
+    <title>Juego Atrapa el Corazón</title>
     <style>
         body {
             display: flex;
@@ -61,17 +61,20 @@
 
         .message {
             position: absolute;
-            bottom: 20px;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            font-size: 20px;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
     </style>
 </head>
 <body>
     <div class="game-container">
         <div class="score">Puntuación: 0</div>
-        <div class="message">Toca el corazón Mininita</div>
+        <div class="message">Haz clic en el corazón para ganar puntos!</div>
         <div class="heart"></div>
     </div>
 
@@ -108,9 +111,16 @@
 
         setTimeout(() => {
             gameActive = false;
-            messageDisplay.textContent = `¡Juego terminado! Puntuación final: ${score}`;
             heart.style.display = 'none';
-        }, 30000);
+            
+            if (score > 10) {
+                messageDisplay.innerHTML = `¡Felicidades! Obtuviste una puntuación de ${score}. ¡Eres un experto atrapando corazones!`;
+            } else {
+                messageDisplay.innerHTML = `¡Juego terminado! Puntuación final: ${score}. ¡Sigue practicando para mejorar!`;
+            }
+
+            messageDisplay.style.opacity = '1';
+        }, 30000); // 30 segundos de juego
     </script>
 </body>
 </html>
