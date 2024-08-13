@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dale a mi corazón</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .heart {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            cursor: pointer;
+            background-color: red;
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        .score {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+        }
+
+        .message {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="score">Puntuación: 0</div>
+        <div class="message">Toca el corazón Mininita</div>
+        <div class="heart"></div>
+    </div>
+
+    <script>
+        const heart = document.querySelector('.heart');
+        const scoreDisplay = document.querySelector('.score');
+        const messageDisplay = document.querySelector('.message');
+        let score = 0;
+        let gameActive = true;
+
+        function getRandomPosition(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function moveHeart() {
+            if (!gameActive) return;
+
+            const x = getRandomPosition(window.innerWidth - heart.clientWidth);
+            const y = getRandomPosition(window.innerHeight - heart.clientHeight);
+
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+        }
+
+        heart.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = `Puntuación: ${score}`;
+            moveHeart();
+        });
+
+        setInterval(() => {
+            moveHeart();
+        }, 1000);
+
+        setTimeout(() => {
+            gameActive = false;
+            messageDisplay.textContent = `¡Juego terminado! Puntuación final: ${score}`;
+            heart.style.display = 'none';
+        }, 30000);
+    </script>
+</body>
+</html>
