@@ -126,31 +126,24 @@
 </head>
 <body>
     <div class="game-container">
-        <div class="background-heart" style="top: 5%; left: 5%; background-image: url('imagenes/Imagen1.jpeg');"></div>
+        <div class="background-heart" style="top: 5%; left: 5%; background-image: url('imagenes/ImagenG.jpeg');"></div>
         <div class="background-heart" style="top: 5%; left: 45%; background-image: url('imagenes/Imagen2.jpeg');"></div>
-        <div class="background-heart" style="top: 5%; left: 85%; background-image: url('imagenes/Imagen3.jpeg');"></div>
-        <div class="background-heart" style="top: 30%; left: 10%; background-image: url('imagenes/Imagen4.jpeg');"></div>
+        <div class="background-heart" style="top: 30%; left: 10%; background-image: url('imagenes/ImagenF.jpeg');"></div>
         <div class="background-heart" style="top: 15%; left: 35%; background-image: url('imagenes/Imagen15.jpeg');"></div>
-        <div class="background-heart" style="top: 15%; left: 65%; background-image: url('imagenes/Imagen45.jpeg');"></div>
         <div class="background-heart" style="top: 25%; left: 5%; background-image: url('imagenes/Imagen67.jpeg');"></div>
         <div class="background-heart" style="top: 25%; left: 85%; background-image: url('imagenes/Imagen89.jpeg');"></div>
-        <div class="background-heart" style="top: 40%; left: 30%; background-image: url('imagenes/Imagen23.jpeg');"></div>
-        <div class="background-heart" style="top: 50%; left: 10%; background-image: url('imagenes/Imagen102.jpeg');"></div>
-        <div class="background-heart" style="top: 50%; left: 80%; background-image: url('imagenes/Imagen110.jpeg');"></div>
         <div class="background-heart" style="top: 60%; left: 45%; background-image: url('imagenes/Imagen150.jpeg');"></div>
-        <div class="background-heart" style="top: 60%; left: 70%; background-image: url('imagenes/Imagen125.jpeg');"></div>
-        <div class="background-heart" style="top: 70%; left: 20%; background-image: url('imagenes/Imagen135.jpeg');"></div>
+        <div class="background-heart" style="top: 60%; left: 70%; background-image: url('imagenes/ImagenA.jpeg');"></div>
         <div class="background-heart" style="top: 70%; left: 75%; background-image: url('imagenes/Imagen160.jpeg');"></div>
         <div class="background-heart" style="top: 80%; left: 10%; background-image: url('imagenes/Imagen180.jpeg');"></div>
-        <div class="background-heart" style="top: 80%; left: 85%; background-image: url('imagenes/Imagen50.jpeg');"></div>
-        <div class="background-heart" style="top: 85%; left: 35%; background-image: url('imagenes/Imagen120.jpeg');"></div>
-        <div class="background-heart" style="top: 85%; left: 60%; background-image: url('imagenes/Imagen30.jpeg');"></div>
+        <div class="background-heart" style="top: 80%; left: 85%; background-image: url('imagenes/ImagenB.jpeg');"></div>
         <div class="background-heart" style="top: 90%; left: 45%; background-image: url('imagenes/Imagen115.jpeg');"></div>
         <div class="background-heart" style="top: 90%; left: 65%; background-image: url('imagenes/Imagen170.jpeg');"></div>
 
         <div class="score">Corazones aplastados 😼: 0</div>
         <div class="message">Aplasta los corazones, mininitaa!</div>
         <div class="heart"></div>
+        </br>
         <button class="restart-button" onclick="window.location.href='index.html';">Volver al inicio</button>
     </div>
 
@@ -193,14 +186,14 @@
             heart.style.display = 'none';
 
             if (score > 25) {
-                messageDisplay.innerHTML = `¡Felicidades! Obtuviste una puntuación de ${score}. ¡Dale amoooor, reclama tu besito!`;
+                messageDisplay.innerHTML = `¡Yeeeiiii! aplastaste ${score} corazones. ¡Dale amoooor, reclama tu besito!`;
             } else {
-                messageDisplay.innerHTML = `¡Juego terminado! Puntuación final: ${score}. ¡Te amoooooo, un poco más mi vida!`;
+                messageDisplay.innerHTML = `¡Un poquititititito más!, solo unos ${score} corazónes. ¡Te amoooooo, un poco más mi vida!`;
             }
 
             messageDisplay.style.opacity = '1';
             restartButton.style.display = 'block';
-        }, 30000);
+        }, 20000);
     </script>
 </body>
 </html>
