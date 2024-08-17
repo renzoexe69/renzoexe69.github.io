@@ -103,6 +103,25 @@
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
+
+        .restart-button {
+            display: none;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .restart-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -132,12 +151,14 @@
         <div class="score">Corazones aplastados 😼: 0</div>
         <div class="message">Aplasta los corazones, mininitaa!</div>
         <div class="heart"></div>
+        <button class="restart-button" onclick="window.location.href='index.html';">Volver al inicio</button>
     </div>
 
     <script>
         const heart = document.querySelector('.heart');
         const scoreDisplay = document.querySelector('.score');
         const messageDisplay = document.querySelector('.message');
+        const restartButton = document.querySelector('.restart-button');
         let score = 0;
         let gameActive = true;
 
@@ -178,6 +199,7 @@
             }
 
             messageDisplay.style.opacity = '1';
+            restartButton.style.display = 'block';
         }, 30000);
     </script>
 </body>
