@@ -126,21 +126,19 @@
 </head>
 <body>
     <div class="game-container">
-
         <div class="background-heart" style="top: 5%; left: 5%; background-image: url('imagenes/ImagenG.jpeg');"></div>
-<div class="background-heart" style="top: 5%; left: 55%; background-image: url('imagenes/Imagen2.jpeg');"></div>
-<div class="background-heart" style="top: 35%; left: 15%; background-image: url('imagenes/ImagenF.jpeg');"></div>
-<div class="background-heart" style="top: 20%; left: 45%; background-image: url('imagenes/Imagen15.jpeg');"></div>
-<div class="background-heart" style="top: 30%; left: 10%; background-image: url('imagenes/Imagen67.jpeg');"></div>
-<div class="background-heart" style="top: 30%; left: 85%; background-image: url('imagenes/Imagen89.jpeg');"></div>
-<div class="background-heart" style="top: 65%; left: 50%; background-image: url('imagenes/Imagen150.jpeg');"></div>
-<div class="background-heart" style="top: 65%; left: 75%; background-image: url('imagenes/ImagenA.jpeg');"></div>
-<div class="background-heart" style="top: 80%; left: 70%; background-image: url('imagenes/Imagen160.jpeg');"></div>
-<div class="background-heart" style="top: 90%; left: 15%; background-image: url('imagenes/Imagen180.jpeg');"></div>
-<div class="background-heart" style="top: 90%; left: 85%; background-image: url('imagenes/ImagenB.jpeg');"></div>
-<div class="background-heart" style="top: 95%; left: 50%; background-image: url('imagenes/Imagen115.jpeg');"></div>
-<div class="background-heart" style="top: 95%; left: 70%; background-image: url('imagenes/Imagen170.jpeg');"></div>
-
+        <div class="background-heart" style="top: 5%; left: 55%; background-image: url('imagenes/Imagen2.jpeg');"></div>
+        <div class="background-heart" style="top: 35%; left: 15%; background-image: url('imagenes/ImagenF.jpeg');"></div>
+        <div class="background-heart" style="top: 20%; left: 45%; background-image: url('imagenes/Imagen15.jpeg');"></div>
+        <div class="background-heart" style="top: 30%; left: 10%; background-image: url('imagenes/Imagen67.jpeg');"></div>
+        <div class="background-heart" style="top: 30%; left: 85%; background-image: url('imagenes/Imagen89.jpeg');"></div>
+        <div class="background-heart" style="top: 65%; left: 50%; background-image: url('imagenes/Imagen150.jpeg');"></div>
+        <div class="background-heart" style="top: 65%; left: 75%; background-image: url('imagenes/ImagenA.jpeg');"></div>
+        <div class="background-heart" style="top: 80%; left: 70%; background-image: url('imagenes/Imagen160.jpeg');"></div>
+        <div class="background-heart" style="top: 90%; left: 15%; background-image: url('imagenes/Imagen180.jpeg');"></div>
+        <div class="background-heart" style="top: 90%; left: 85%; background-image: url('imagenes/ImagenB.jpeg');"></div>
+        <div class="background-heart" style="top: 95%; left: 50%; background-image: url('imagenes/Imagen115.jpeg');"></div>
+        <div class="background-heart" style="top: 95%; left: 70%; background-image: url('imagenes/Imagen170.jpeg');"></div>
 
         <div class="score">Corazones aplastados 😼: 0</div>
         <div class="message">Aplasta los corazones, mininitaa!</div>
@@ -188,14 +186,14 @@
             gameActive = false;
             heart.style.display = 'none';
 
-            if (score > 10) {
+            if (score > 15) {
                 messageDisplay.innerHTML = `¡Yeeeiiii! aplastaste ${score} corazones. ¡Dale amoooor, reclama tu besito y entra a la galería 12!`;
+                restartButton.style.display = 'block';
             } else {
-                messageDisplay.innerHTML = `¡Un poquititititito más!, solo unos ${score} corazónes. ¡Te amoooooo, un poco más mi vida!`;
+                messageDisplay.innerHTML = `¡Un poquititititito más!, ${score} corazónes aplastados. ¡Un poco más para la galería secreetaaa!`;
             }
             
             messageDisplay.style.opacity = '1';
-            restartButton.style.display = 'block';
         }, 20000);
     </script>
 </body>
