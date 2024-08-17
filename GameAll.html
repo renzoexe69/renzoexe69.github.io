@@ -187,12 +187,13 @@
             gameActive = false;
             heart.style.display = 'none';
 
-            if (score > 25) {
+            if (score > 20) {
                 messageDisplay.innerHTML = `¡Yeeeiiii! aplastaste ${score} corazones. ¡Dale amoooor, reclama tu besito!`;
             } else {
                 messageDisplay.innerHTML = `¡Un poquititititito más!, solo unos ${score} corazónes. ¡Te amoooooo, un poco más mi vida!`;
             }
-
+            </br>
+            </br>
             messageDisplay.style.opacity = '1';
             restartButton.style.display = 'block';
         }, 20000);
