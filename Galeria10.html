@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegalery.css">
+    <link rel="icon" href="imagenes/ImagenA.jpeg">
+
+      <title>Decima Galeria</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Decima Galeria</h1>
+        <a href="index.html" type="button" class="color-button-back"> Inicio </a>
+    </div>
+
+    <div class="gallery">
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen245.jpeg')">
+    <img src="imagenes/Imagen245.jpeg" alt="Foto 245">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen246.jpg')">
+    <img src="imagenes/Imagen246.jpeg" alt="Foto 246">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen247.jpg')">
+    <img src="imagenes/Imagen247.jpeg" alt="Foto 247">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen248.jpeg')">
+    <img src="imagenes/Imagen248.jpeg" alt="Foto 248">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen249.jpeg')">
+    <img src="imagenes/Imagen249.jpeg" alt="Foto 249">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen250.jpeg')">
+    <img src="imagenes/Imagen250.jpeg" alt="Foto 250">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen251.jpeg')">
+    <img src="imagenes/Imagen251.jpeg" alt="Foto 251">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen252.jpeg')">
+    <img src="imagenes/Imagen252.jpeg" alt="Foto 252">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen253.jpeg')">
+    <img src="imagenes/Imagen253.jpeg" alt="Foto 253">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen254.jpeg')">
+    <img src="imagenes/Imagen254.jpeg" alt="Foto 254">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen255.jpeg')">
+    <img src="imagenes/Imagen255.jpeg" alt="Foto 255">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen256.jpeg')">
+    <img src="imagenes/Imagen256.jpeg" alt="Foto 256">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen257.jpeg')">
+    <img src="imagenes/Imagen257.jpeg" alt="Foto 257">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen258.jpeg')">
+    <img src="imagenes/Imagen258.jpeg" alt="Foto 258">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen259.jpeg')">
+    <img src="imagenes/Imagen259.jpeg" alt="Foto 259">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen260.jpeg')">
+    <img src="imagenes/Imagen260.jpeg" alt="Foto 260">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen261.jpeg')">
+    <img src="imagenes/Imagen261.jpeg" alt="Foto 261">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen262.jpeg')">
+    <img src="imagenes/Imagen262.jpeg" alt="Foto 262">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen263.jpeg')">
+    <img src="imagenes/Imagen263.jpeg" alt="Foto 263">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen264.jpeg')">
+    <img src="imagenes/Imagen264.jpeg" alt="Foto 264">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen265.jpeg')">
+    <img src="imagenes/Imagen265.jpeg" alt="Foto 265">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen266.jpeg')">
+    <img src="imagenes/Imagen266.jpeg" alt="Foto 266">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen267.jpeg')">
+    <img src="imagenes/Imagen267.jpeg" alt="Foto 267">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen268.jpeg')">
+    <img src="imagenes/Imagen268.jpeg" alt="Foto 268">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen269.jpeg')">
+    <img src="imagenes/Imagen269.jpeg" alt="Foto 269">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen270.jpeg')">
+    <img src="imagenes/Imagen270.jpeg" alt="Foto 270">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen271.jpeg')">
+    <img src="imagenes/Imagen271.jpeg" alt="Foto 271">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen272.jpeg')">
+    <img src="imagenes/Imagen272.jpeg" alt="Foto 272">
+</div>
+<div class="photo" onclick="openModal('', '', 'imagenes/Imagen273.jpeg')">
+    <img src="imagenes/Imagen273.jpeg" alt="Foto 273">
+</div>
+
+
+
+
+    
+</div>
+    <!-- Agrega más elementos .photo para más fotos -->
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <h2 id="modal-title">Título de la Foto</h2>
+            <p id="modal-description">Descripción de la foto.</p>
+            <img id="modal-image" class="modal-image" src="" alt="">
+        </div>
+    </div>
+    <script>
+        function openModal(title, description, imageUrl) {
+            var modal = document.getElementById("modal");
+            var modalTitle = document.getElementById("modal-title");
+            var modalDescription = document.getElementById("modal-description");
+            var modalImage = document.getElementById("modal-image");
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalImage.src = imageUrl;
+
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+<br>
+<footer>
+    <div>
+        <div class="pagination">
+            <a href="Galeria1.html" class="active">1</a>
+            <a href="Galeria2.html" class="active">2</a>
+            <a href="Galeria3.html" class="active">3</a>
+            <a href="Galeria4.html" class="active">4</a>
+            <a href="Galeria5.html" class="active">5</a>
+            <a href="Galeria6.html" class="active">6</a>
+            <a href="Galeria7.html" class="active">7</a>
+            <a href="Galeria8.html" class="active">8</a>
+            <a href="Galeria9.html" class="active">9</a>
+            <a href="Galeria10.html" class="active">10</a>
+          </div>
+          
+    </div>
+</footer>
+<br>
