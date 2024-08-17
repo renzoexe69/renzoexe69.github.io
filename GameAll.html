@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego Atrapa el Corazón</title>
+    <title>Un pequeño jueguito</title>
     <style>
         body {
             display: flex;
@@ -127,8 +127,8 @@
 <div class="background-heart" style="top: 90%; left: 45%; background-image: url('imagenes/Imagen115.jpeg');"></div>
 <div class="background-heart" style="top: 90%; left: 65%; background-image: url('imagenes/Imagen170.jpeg');"></div>
 
-        <div class="score">Puntuación: 0</div>
-        <div class="message">Haz clic en el corazón para ganar puntos!</div>
+        <div class="score">Corazones aplastados 😼: 0</div>
+        <div class="message">Aplasta los corazones, mininitaa!</div>
         <div class="heart"></div>
     </div>
 
@@ -167,16 +167,14 @@
             gameActive = false;
             heart.style.display = 'none';
             
-            if (score > 10) {
-                messageDisplay.innerHTML = `¡Felicidades! Obtuviste una puntuación de ${score}. ¡Eres un experto atrapando corazones!`;
-                <a href="index.html" type="button" class="color-button-back"> Inicio </a>
-            } else {
-                messageDisplay.innerHTML = `¡Juego terminado! Puntuación final: ${score}. ¡Sigue practicando para mejorar!`;
-                <a href="index.html" type="button" class="color-button-back"> Inicio </a>
-            }
+            if (score > 25) {
+                messageDisplay.innerHTML = `¡Felicidades! Obtuviste una puntuación de ${score}. ¡Dale amoooor, reclama tu besito!`;
+                            } else {
+                messageDisplay.innerHTML = `¡Juego terminado! Puntuación final: ${score}. ¡Te amoooooo, un poco más mi vida!`;
+                           }
 
             messageDisplay.style.opacity = '1';
-        }, 30000); // 30 segundos de juego
+        }, 30000);
     </script>
 </body>
 </html>
